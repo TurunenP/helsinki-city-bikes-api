@@ -55,26 +55,14 @@ const getJourneys = async (req, res) => {
 
 
    
- 
-
-
-
-
-
-
-
 }
 
 
 
 module.exports = {
     getJourneys,
-   
+    
 }
-
-
-
-
 
 
 
