@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 // routes
 
+const journeyRoutes = require('./routes/index');
 
 
 const app = express();
@@ -21,11 +22,14 @@ app.use(express.json());
 
 
 
+
+
 app.get('/', (req, res) => {
     res.json({ message: 'Welcome to Journey API' });
 }
 );
 
+app.use('/api/v1', journeyRoutes.router);
 
 
 
