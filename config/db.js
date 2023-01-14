@@ -8,7 +8,9 @@ require('dotenv').config();
 
 const mongoose = require('mongoose');
 
-const MONGODB_URL = "mongodb+srv://doadmin:3Cn2Kp4jcJ80W659@db-mongodb-nyc1-22526-ccc29d80.mongo.ondigitalocean.com/admin?retryWrites=true&w=majority"
+// const MONGODB_URL = "mongodb+srv://doadmin:3Cn2Kp4jcJ80W659@db-mongodb-nyc1-22526-ccc29d80.mongo.ondigitalocean.com/admin?retryWrites=true&w=majority"
+
+const MONGODB_URL = process.env.MONGODB_URL;
 
 
 
