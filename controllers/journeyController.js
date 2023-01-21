@@ -57,10 +57,55 @@ const getJourneys = async (req, res) => {
    
 }
 
+const addjourney = async (req, res) => {
+
+
+    const { departure, return_date, departure_station_id, departure_station_name, return_station_id, return_station_name, covered_distance_meters, duration_in_sec } = req.body;
+    
+    const journey = new Journey({
+        departure,
+        return_date,
+        departure_station_id,
+        departure_station_name,
+        return_station_id,
+        return_station_name,
+        covered_distance_meters,
+        duration_in_sec
+    });
+
+
+    try {
+        const newJourney = await journey.save();
+        res.status(201).json(newJourney);
+    }
+    catch (e) {
+        res.status(400).json({ message: e.message });
+    }
+}
+
+
+// get a single journey
+
+const getJourney = async (req, res) => {
+    try {
+        const journey = await Journey.findById(req.params.id);
+        res.json(journey);
+    }
+    catch (e) {
+        res.status(500).json({ message: e.message });
+    }
+}
+
+
+
+
+
 
 
 module.exports = {
     getJourneys,
+    addjourney,
+    getJourney
     
 }
 
