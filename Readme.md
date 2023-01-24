@@ -77,9 +77,6 @@ content-type:application/json
 https://helsinki-city-bikes-api-production.up.railway.app/api/v1/journey
 
 
-{
-    
-}
 
 
 ```
