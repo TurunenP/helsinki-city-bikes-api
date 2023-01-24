@@ -54,7 +54,9 @@ https://helsinki-city-bikes-api-production.up.railway.app/api/v1/journeys
 ```
 
 
-https://helsinki-city-bikes-api-production.up.railway.app/api/v1/stations
+https://helsinki-city-bikes-api-production.up.railway.app/api/v1/journey/id
+
+
 
 
 ```
@@ -63,9 +65,24 @@ https://helsinki-city-bikes-api-production.up.railway.app/api/v1/stations
 3 . Add  Journey
 
 ```
+Method : Post
 
-http:base.url/api/v1/
-https://helsinki-city-bikes-api-production.up.railway.app/api/v1/stations
+data ={
+    ...data
+}
+
+content-type:application/json
+
+
+https://helsinki-city-bikes-api-production.up.railway.app/api/v1/journey
+
+
+{
+    
+}
+
 
 ```
+
+
 
