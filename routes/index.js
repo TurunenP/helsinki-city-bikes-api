@@ -11,14 +11,16 @@ const router = express.Router();
 
 const { getJourneys,addjourney,getJourney} = require('../controllers/journeyController');
 
+const {mapStationAndJourney} = require('../controllers/journeyStationsController');
+
 
 
 // Journey routes
 router.get('/journeys', getJourneys);
 
-router.get('/journeys/:id', getJourney);
+router.get('/journey/:id', getJourney);
 
-router.post('/journeys', addjourney);
+router.post('/journey', addjourney);
 
 // Station routes
 
@@ -31,6 +33,10 @@ router.get('/stations/:id', getStation);
 router.post('/stations', addStation);
 
 router.put('/stations/:id', updateStation);
+
+// Journey Stations routes
+router.get('/journeystations/:id', mapStationAndJourney);
+
 
 
 
